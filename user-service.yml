@@ -1,0 +1,32 @@
+server:
+  port: 0   # random port, Eureka will register
+
+spring:
+  application:
+    name: user-service
+
+  data:
+    mongodb:
+      uri: ${MONGO_URI}
+      database:${MONGO_DB}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+kafka:
+  bootstrap-servers: localhost:9092
+  topic:
+    user-events: user-events
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: 900000          # 15 min
+  refresh-expiration: 604800000  # 7 days
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info
