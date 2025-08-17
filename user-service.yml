@@ -22,8 +22,10 @@ kafka:
 
 jwt:
   secret: ${JWT_SECRET}
-  expiration: 900000          # 15 min
-  refresh-expiration: 604800000  # 7 days
+  expiration:
+    access: 900000     # 15 minutes
+    refresh: 604800000 # 7 days
+
 
 management:
   endpoints:
