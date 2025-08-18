@@ -19,8 +19,8 @@ eureka:
 jwt:
   secret: ${JWT_SECRET}
   expiration:
-    access: 900000     # 15 minutes
-    refresh: 604800000 # 7 days
+    access: ${ACCESS}     # 15 minutes
+    refresh: ${REFRESH} # 7 days
 
 
 management:
