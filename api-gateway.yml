@@ -10,7 +10,14 @@ spring:
       discovery:
         locator:
           enabled: true
-          lower-case-service-id: true   # allows routes like /user-service/**
+          lower-case-service-id: true
+
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedMethods: "*"
+            allowedHeaders: "*"
 
       routes:
         - id: user-service
