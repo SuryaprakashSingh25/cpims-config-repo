@@ -1,5 +1,11 @@
 server:
-  port: 8081   # random port, Eureka will register
+  port: 8081
+
+app:
+  admin:
+    email: ${ADMIN_EMAIL}
+    password: ${ADMIN_PASS}
+
 
 spring:
   application:
