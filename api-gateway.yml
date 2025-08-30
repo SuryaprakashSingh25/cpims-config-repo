@@ -17,10 +17,6 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/api/users/**
-          filters:
-            - name: JwtGatewayFilter
-            - AddRequestHeader=X-User-Id,
-            - AddRequestHeader=X-User-Role,
 
         - id: issue-service
           uri: lb://issue-service
