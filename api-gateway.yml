@@ -18,7 +18,7 @@ spring:
           predicates:
             - Path=/api/users/**
           filters:
-            - name: JwtAuthFilter
+            - name: JwtGatewayFilter
             - AddRequestHeader=X-User-Id,
             - AddRequestHeader=X-User-Role,
 
