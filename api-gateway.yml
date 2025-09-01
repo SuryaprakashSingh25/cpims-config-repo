@@ -7,7 +7,6 @@ spring:
 
   cloud:
     gateway:
-      forwarded-headers-strategy: native
       discovery:
         locator:
           enabled: true
@@ -33,9 +32,6 @@ spring:
           uri: lb://dashboard-service
           predicates:
             - Path=/dashboard/**
-
-jwt:
-  secret: ${JWT_SECRET}
 
 eureka:
   client:
