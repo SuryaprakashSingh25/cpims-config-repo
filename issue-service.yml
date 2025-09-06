@@ -1,12 +1,6 @@
 server:
   port: 8082
 
-app:
-  admin:
-    email: ${ADMIN_EMAIL}
-    password: ${ADMIN_PASS}
-
-
 spring:
   application:
     name: issue-service
