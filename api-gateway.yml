@@ -21,7 +21,7 @@ spring:
         - id: issue-service
           uri: lb://issue-service
           predicates:
-            - Path=/issues/**
+            - Path=/api/issues/**
 
         - id: notification-service
           uri: lb://notification-service
