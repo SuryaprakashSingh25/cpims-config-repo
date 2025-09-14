@@ -17,6 +17,11 @@ spring:
           starttls:
             enable: true
 
+jwt:
+  secret: ${JWT_SECRET}
+  expiration:
+    access: ${ACCESS}
+
 eureka:
   client:
     service-url:
