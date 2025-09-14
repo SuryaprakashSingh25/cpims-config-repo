@@ -28,10 +28,10 @@ spring:
           predicates:
             - Path=/notifications/**
 
-        - id: dashboard-service
-          uri: lb://dashboard-service
+        - id: media-service
+          uri: lb://media-service
           predicates:
-            - Path=/dashboard/**
+            - Path=/api/media/**
 
 eureka:
   client:
