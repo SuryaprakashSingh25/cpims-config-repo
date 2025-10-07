@@ -16,12 +16,22 @@ spring:
         - id: user-service
           uri: lb://user-service
           predicates:
-            - Path=/api/users/**, /user-service/v3/api-docs
+            - Path=/api/users/**
+            
+        - id: user-service-docs
+          uri: lb://user-service
+          predicates:
+            - Path=/user-service/v3/api-docs
 
         - id: issue-service
           uri: lb://issue-service
           predicates:
-            - Path=/api/issues/**, /issue-service/v3/api-docs
+            - Path=/api/issues/**
+
+        - id: issue-service-docs
+          uri: lb://issue-service
+          predicates:
+            - Path=/issue-service/v3/api-docs
 
         - id: notification-service
           uri: lb://notification-service
@@ -31,7 +41,13 @@ spring:
         - id: media-service
           uri: lb://media-service
           predicates:
-            - Path=/api/media/**, /media-service/v3/api-docs
+            - Path=/api/media/**
+
+        - id: media-service-docs
+          uri: lb://media-service
+          predicates:
+            - Path=/media-service/v3/api-docs
+        
   springdoc:
     swagger-ui:
       disable-swagger-default-url: true
