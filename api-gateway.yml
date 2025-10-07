@@ -32,6 +32,11 @@ spring:
           uri: lb://media-service
           predicates:
             - Path=/api/media/**
+  springdoc:
+    swagger-ui:
+      disable-swagger-default-url: true
+
+
 
 eureka:
   client:
